@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servernetwerksimon</title>
+    <link rel="stylesheet" href="src/navbar/navbar.css">
+    <link rel="stylesheet" href="src/body/index.css">
+    <script defer src="src/translations.js"></script>
+    <script defer src="src/navbar/navbar.js"></script>
+    <meta name="description" content="Simon's portfolio showcasing skills, projects, and contact information.">
+</head>
+<body>
+
+    <!-- Header -->
+    <header><nav>
+        <ul class="nav-links">
+            <li><a href="home.html" data-i18n="home"></a></li>
+            <li><a href="about.html" data-i18n="about"></a></li>
+            <li><a href="skills.html" data-i18n="skills"></a></li>
+            <li><a href="projects.html" data-i18n="projects"></a></li>
+            <li><a href="templates.html" data-i18n="dashboard"></a></li>
+            <li><a href="contact.html" data-i18n="contact"></a></li>
+            <div class="select" tabindex="1">
+                <input class="selectopt" name="language" type="radio" id="opt1" value="nl" checked onchange="changeLanguage()">
+                <label for="opt1" class="option">Nederlands</label>
+              
+                <input class="selectopt" name="language" type="radio" id="opt2" value="en" onchange="changeLanguage()">
+                <label for="opt2" class="option">Engels</label>
+            </div>              
+        </ul>
+        <ul class="nav-login">
+            <li><a href="login.html" data-i18n="login"></a></li>
+        </ul>
+    </nav></header>    
+    
+    <!-- Main Section -->
+    <main>
+
+
+        <section class="hero">
+            <h1 data-i18n="title"></h1><subtext data-i18n="title_subtext"></subtext><br><br><a href="about.html" data-i18n="about_me"></a>
+        </section>
+
+        <section class="dashboard">
+            <h1 data-i18n="dashboard_title" class="dashboard-title">test</h1>
+            <div data-i18n="dashboard_subtitle" class="dashboard-subtitle"></div><br><br><br>
+            <a href="signup.html"  data-i18n="dashboard_button"></a>
+        </section>
+
+        <section class="main_body">
+            <div class="skills">
+                <h1 data-i18n="skills_title" class="skills-title"></h1>
+                <!-- Skill 1: Fullstack Development -->
+                <a href="skills.html"><div class="skill-box"><img src="src/img/fullstack.png" alt="Skill 1"><h2 data-i18n="skill_1_h2"></h2><p data-i18n="skill_1_p"></p></div></a>
+                <!-- Skill 2: Server & Cloud Management -->
+                <a href="skills.html"><div class="skill-box"><img src="src/img/server.png" alt="Skill 2"><h2 data-i18n="skill_2_h2">t</h2><p data-i18n="skill_2_p"></p></div></a>
+                <!-- Skill 3: Cybersecurity & Networking -->
+                <a href="skills.html"><div class="skill-box"><img src="src/img/internet.png" alt="Skill 3"><h2 data-i18n="skill_3_h2"></h2><p data-i18n="skill_3_p"></p></div></a>
+
+                <a href="skills.html" class="main_button_1" data-i18n="main_button_1"></a>
+            </div>
+            <div class="projects">
+                <h1 data-i18n="project_title" class="projects-title"></h1>
+                <!-- Project 1: AI School Project -->
+                <a href="projects.html"><div class="project-box"><img src="src/img/ai.png" alt="AI Project"><h2 data-i18n="project_1_h2"></h2><p data-i18n="project_1_p"></p></div></a>
+                <!-- Project 2: Personal Website -->
+                <a href="projects.html"><div class="project-box"><img src="src/img/website.png" alt="Website Project"><h2 data-i18n="project_2_h2"></h2><p data-i18n="project_2_p"></p></div></a>
+                <!-- Project 3: Home Server Setup -->
+                <a href="projects.html"><div class="project-box"><img src="src/img/home-server.png" alt="Server Project"><h2 data-i18n="project_3_h2"></h2><p data-i18n="project_3_p"></p></div></a>
+                
+                <a href="projects.html" class="main_button_2" data-i18n="main_button_2"></a>
+        </div></section>
+
+        <section class="templates">
+            <h1 data-i18n="templates_title" class="templates-title"></h1>
+            <div class="templates-quick">
+                <a href="templates.html"><div class="templates-box"><img src="https://placehold.co/50x50" alt=""><div class="text-container"><h2 data-i18n="templates_1_h2"></h2><p data-i18n="templates_1_p"></p></div></div></a>
+                <a href="templates.html"><div class="templates-box"><img src="https://placehold.co/50x50" alt=""><div class="text-container"><h2 data-i18n="templates_2_h2"></h2><p data-i18n="templates_2_p"></p></div></div></a>
+                <a href="templates.html"><div class="templates-box"><img src="https://placehold.co/50x50" alt=""><div class="text-container"><h2 data-i18n="templates_3_h2"></h2><p data-i18n="templates_3_p"></p></div></div></a>
+                <a href="templates.html"><div class="templates-box"><img src="https://placehold.co/50x50" alt=""><div class="text-container"><h2 data-i18n="templates_4_h2"></h2><p data-i18n="templates_4_p"></p></div></div></a>
+                <a href="templates.html"><div class="templates-box"><img src="https://placehold.co/50x50" alt=""><div class="text-container"><h2 data-i18n="templates_5_h2"></h2><p data-i18n="templates_5_p"></p></div></div></a>
+                <a href="templates.html"><div class="templates-box"><p class="main_button_3" data-i18n="main_button_3"></p></div></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div data-i18n="github_link"><img src="https://placehold.co/25x25" alt=""><a href="https://github.com" target="_blank">github pagina</a></div>
+        <div data-i18n="instagram"><img src="https://placehold.co/25x25" alt=""><a href="https://www.instagram.com" target="_blank">instagram pagina</a></div>
+        <div data-i18n="youtube_link"><img src="https://placehold.co/25x25" alt=""><a href="https://www.youtube.com" target="_blank">youtube pagina</a></div>
+        <div data-i18n="linkedin_link"><img src="https://placehold.co/25x25" alt=""><a href="https://www.linkedin.com" target="_blank">linkedin pagina</a></div>
+        <p>&copy; 2025 Simon. Alle rechten voorbehouden.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Simon</title>
+    <link rel="stylesheet" href="src/navbar/navbar.css">
+    <link rel="stylesheet" href="src/body/projects.css">
+    <script defer src="src/translations.js"></script>
+    <script defer src="src/navbar/navbar.js"></script>
+    <meta name="description" content="Simon's portfolio showcasing skills, projects, and contact information.">
+</head>
+<body>
+
+    <!-- Header -->
+    <header><nav>
+        <ul class="nav-links">
+            <li><a href="home.html" data-i18n="home"></a></li>
+            <li><a href="about.html" data-i18n="about"></a></li>
+            <li><a href="skills.html" data-i18n="skills"></a></li>
+            <li><a href="projects.html" data-i18n="projects"></a></li>
+            <li><a href="templates.html" data-i18n="dashboard"></a></li>
+            <li><a href="contact.html" data-i18n="contact"></a></li>
+            <li><select id="language" onchange="changeLanguage()"><option value="en">GB: English</option><option value="nl">NL: Nederlands</option></select></li>
+        </ul>
+        <ul class="nav-login">
+            <li><a href="login.html" data-i18n="login"></a></li>
+        </ul>
+    </nav></header>  
+     
+    <main>
+        <div class="projects">
+            <!-- Project 1: AI School Project -->
+            <div class="project-box">
+                <img src="https://placehold.co/250x250" alt="AI Project">
+                <h2>AI School Project</h2>
+                <p>This project involved creating an AI-powered racecar using the NEAT (NeuroEvolution of Augmenting Topologies) algorithm. The car was designed to autonomously navigate a racecourse, adjusting its behavior based on real-time sensor input, optimizing its driving strategy through evolutionary techniques. The goal was to demonstrate the power of AI in solving complex, dynamic challenges, such as autonomous driving.</p>
+            </div>
+            
+            <!-- Project 2: Personal Website -->
+            <div class="project-box">
+                <img src="https://placehold.co/250x250" alt="Website Project">
+                <h2>Personal Website</h2>
+                <p>This portfolio website showcases my skills, projects, and achievements. I developed it using HTML, CSS, and JavaScript, and utilized Docker to containerize the entire application for easy deployment and scalability. The website is designed to be both a personal project and a demonstration of my web development skills, with a clean and responsive design that adapts to various screen sizes and devices.</p>
+            </div>
+            
+            <!-- Project 3: Home Server Setup -->
+            <div class="project-box">
+                <img src="https://placehold.co/250x250" alt="Server Project">
+                <h2>Home Server Setup</h2>
+                <p>For this project, I built and configured a home server capable of hosting a wide range of applications for both personal and public use. The server serves as a test environment for various projects, including website hosting, file sharing, and other web services. I managed the server using Proxmox and Docker for containerization, ensuring high reliability, scalability, and security for all hosted applications. This project provided me with hands-on experience in server management, virtualization, and network configuration.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Simon. Alle rechten voorbehouden.</p>
+    </footer>
+
+</body>
+</html>

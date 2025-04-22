@@ -1,0 +1,182 @@
+@import url(../var/var.css);  /* Importeer je variabelen voor kleuren en andere instellingen */
+
+/* Algemene navbar styling */
+header {
+    background: linear-gradient(to right, var(--achtergrond-grijs), var(--primary-hover), var(--achtergrond-grijs)); /* Achtergrondkleur met gradient */
+    padding: 10px 0;  /* Padding boven en onder de header */
+    width: 100%;  /* Zorgt ervoor dat de header de volledige breedte van de pagina vult */
+    position: relative;  /* Zorgt ervoor dat de header bovenop andere elementen komt */
+    z-index: 100;  /* Geeft de header een hoge z-index voor bovenliggende elementen */
+    border-radius: 50px;  /* Maakt de hoeken van de header afgerond */
+}
+
+/* Schaduw onder de header */
+header::before {
+    content: "";  /* Lege inhoud voor het schaduw-element */
+    position: absolute;  /* Het element wordt absoluut gepositioneerd ten opzichte van de header */
+    left: 0;  /* Plaats het schaduw-element helemaal aan de linkerkant */
+    top: 100%;  /* Zet het direct onder de header */
+    width: 100%;  /* Het schaduw-element vult de volledige breedte van de header */
+    height: 20px;  /* Hoogte van de schaduw */
+    background: linear-gradient(to right, var(--achtergrond-grijs), var(--primary-hover), var(--achtergrond-grijs));  /* Zelfde achtergrondkleur als de header */
+    filter: blur(8px);  /* Maak de schaduw vervaagd */
+    border-radius: 50px;  /* Maak de hoeken van de schaduw afgerond */
+    opacity: 0.8;  /* Maak de schaduw lichtdoorlatend */
+}
+
+/* Nav-container */
+nav {
+    display: flex;  /* Gebruik flexbox om de items netjes uit te lijnen */
+    justify-content: center;  /* Center de navigatie-items horizontaal */
+    align-items: center;  /* Centreer de items verticaal */
+    width: 100%;  /* Zorg ervoor dat de nav de volledige breedte van de pagina vult */
+    position: relative;  /* Zorg ervoor dat de nav bovenop andere elementen komt */
+}
+
+/* Nav-links in het midden */
+.nav-links {
+    display: flex;  /* Gebruik flexbox om de links naast elkaar te plaatsen */
+    gap: 20px;  /* Tussenruimte tussen de links */
+    list-style: none;  /* Verwijder de standaard lijststijl (bolletjes) */
+    padding: 0;  /* Verwijder de standaard padding */
+    position: relative;  /* Belangrijk voor de indicator die we later toevoegen */
+}
+
+/* Algemene link styling */
+.nav-links a {
+    color: var(--text-color);  /* Tekstkleur van de link */
+    text-decoration: none;  /* Verwijder de standaard onderstreping van de link */
+    font-size: 1rem;  /* Standaard fontgrootte voor de link */
+    font-weight: bold;  /* Maak de tekst vet */
+    font-family: "Poppins", sans-serif;  /* Stel de lettertype in op Poppins */
+    padding: 10px 15px;  /* Padding rondom de tekst in de link */
+    position: relative;  /* Voor mogelijke absolute positionering binnen de link */
+    transition: color 0.3s ease-in-out;  /* Voeg een vloeiende overgang toe voor de kleurverandering */
+}
+
+/* Indicator die schuift tussen actieve links */
+.nav-indicator {
+    position: absolute;  /* Plaats de indicator absoluut ten opzichte van de nav-links */
+    bottom: -25px;  /* Zet de indicator onder de links */
+    height: 5px;  /* Bepaal de hoogte van de indicator */
+    background-color: var(--active-tekst);  /* De kleur van de indicator */
+    width: 0;  /* De breedte van de indicator is aanvankelijk 0 */
+    transition: transform 0.3s ease, width 1s ease;  /* Voeg een vloeiende overgang toe voor de breedte en positie van de indicator */
+    border-radius: 10px;  /* Maak de hoeken van de indicator afgerond */
+}
+
+/* Tekstkleur veranderen wanneer actief */
+.nav-links a.active {
+    color: var(--active-text-color);  /* Verander de tekstkleur wanneer de link actief is */
+}
+
+/* Login-knop naar rechts */
+.nav-login {
+    list-style: none;  /* Verwijder de lijststijl van de login-knop */
+    position: absolute;  /* Zet de login-knop absoluut ten opzichte van de nav */
+    right: 20px;  /* Plaats de login-knop 20px vanaf de rechterkant */
+}
+
+/* Styling van de login-knop */
+.nav-login a {
+    display: inline-block;  /* Zet de knop naast andere elementen */
+    color: var(--text-color);  /* Tekstkleur van de knop */
+    text-decoration: none;  /* Verwijder de standaard onderstreping van de link */
+    font-size: 1.1rem;  /* Standaard fontgrootte */
+    font-weight: bold;  /* Maak de tekst vet */
+    padding: 10px 20px;  /* Padding rondom de tekst in de knop */
+    border-radius: 20px;  /* Maak de hoeken van de knop afgerond */
+    transition: background-color 1s ease-in-out, transform 0.5s ease-in-out;  /* Voeg een vloeiende overgang toe voor de achtergrondkleur en de transform */
+}
+
+/* Hover-effect voor de login-knop */
+.nav-login a:hover {
+    background-color: var(--text-color);  /* Verander de achtergrondkleur bij hover */
+    color: var(--achtergrond-zwart);  /* Verander de tekstkleur naar zwart wanneer actief */
+    transform: scale(1.05);  /* Vergroot de knop lichtjes bij hover */
+}
+
+/* Actief effect voor de login-knop */
+.nav-login a:active {
+    transform: scale(0.95);  /* Maak de knop iets kleiner bij klikken */
+}
+
+/* Styling voor de actieve login-knop */
+.nav-login a.active {
+    background-color: var(--text-color);  /* Verander de achtergrondkleur van de actieve knop */
+    color: var(--achtergrond-zwart);  /* Verander de tekstkleur naar zwart wanneer actief */
+}
+
+.select {
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:250px;
+    height:40px;
+  }
+  
+  .option {
+    padding:0 30px 0 10px;
+    min-height:40px;
+    display:flex;
+    align-items:center;
+    background:#333;
+    border-top:#222 solid 1px;
+    position:absolute;
+    top:0;
+    width: 100%;
+    pointer-events:none;
+    order:2;
+    z-index:1;
+    transition:background .4s ease-in-out;
+    box-sizing:border-box;
+    overflow:hidden;
+    white-space:nowrap;
+    
+  }
+  
+  .option:hover {
+    background:#666;
+  }
+  
+  .select:focus .option {
+    position:relative;
+    pointer-events:all;
+  }
+  
+  input {
+    opacity:0;
+    position:absolute;
+    left:-99999px;
+  }
+  
+  input:checked + label {
+    order: 1;
+    z-index:2;
+    background:#666;
+    border-top:none;
+    position:relative;
+  }
+  
+  input:checked + label:after {
+    content:'';
+    width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid white;
+    position:absolute;
+    right:10px;
+    top:calc(50% - 2.5px);
+    pointer-events:none;
+    z-index:3;
+  }
+  
+  input:checked + label:before {
+    position:absolute;
+    right:0;
+    height: 40px;
+    width: 40px;
+    content: '';
+    background:#666;
+  }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Simon</title>
+    <link rel="stylesheet" href="src/body/skills.css">
+    <link rel="stylesheet" href="src/navbar/navbar.css">
+    <script defer src="src/navbar/navbar.js"></script>
+    <script defer src="src/translations.js"></script>
+    <meta name="description" content="Simon's portfolio showcasing skills, projects, and contact information.">
+</head>
+<body>
+
+    <!-- Header -->
+    <header><nav>
+        <ul class="nav-links">
+            <li><a href="home.html" data-i18n="home"></a></li>
+            <li><a href="about.html" data-i18n="about"></a></li>
+            <li><a href="skills.html" data-i18n="skills"></a></li>
+            <li><a href="projects.html" data-i18n="projects"></a></li>
+            <li><a href="templates.html" data-i18n="dashboard"></a></li>
+            <li><a href="contact.html" data-i18n="contact"></a></li>
+            <li><select id="language" onchange="changeLanguage()"><option value="en">GB: English</option><option value="nl">NL: Nederlands</option></select></li>
+        </ul>
+        <ul class="nav-login">
+            <li><a href="login.html" data-i18n="login"></a></li>
+        </ul>
+    </nav></header>  
+
+    <main>
+        <div class="skills">
+            <!-- Skill 1: Fullstack Development -->
+            <div class="skill-box">
+                <img src="https://placehold.co/250x250" alt="Skill 1">
+                <h2>Skill 1: Fullstack Development</h2>
+                <p>Extensive experience in building dynamic and responsive websites and web applications using modern technologies. Skilled in both frontend and backend development, including:</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js & Angular</li>
+                    <li>Node.js & Express</li>
+                    <li>RESTful APIs</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+        
+            <!-- Skill 2: Server & Cloud Management -->
+            <div class="skill-box">
+                <img src="https://placehold.co/250x250" alt="Skill 2">
+                <h2>Skill 2: Server & Cloud Management</h2>
+                <p>Strong expertise in managing and optimizing both physical and virtualized servers, including cloud-based infrastructure. Ensuring security, performance, and scalability for various applications and services. Proficient with:</p>
+                <ul>
+                    <li>Proxmox</li>
+                    <li>Ubuntu & CentOS</li>
+                    <li>Docker & Kubernetes</li>
+                    <li>Windows Server 2016 - 2025</li>
+                    <li>WAMP & LAMP Stack</li>
+                    <li>MySQL & MongoDB</li>
+                    <li>Cloud platforms (AWS, Azure)</li>
+                    <li>Virtualization & Hyper-V</li>
+                </ul>
+            </div>
+        
+            <!-- Skill 3: Cybersecurity & Networking -->
+            <div class="skill-box">
+                <img src="https://placehold.co/250x250" alt="Skill 3">
+                <h2>Skill 3: Cybersecurity & Networking</h2>
+                <p>Experience in protecting systems and networks from cyber threats, managing network configurations, and performing security audits. Proficient in setting up secure communication protocols and hardening servers. Familiar with:</p>
+                <ul>
+                    <li>Network Protocols (TCP/IP, HTTP, DNS)</li>
+                    <li>Firewalls & VPNs</li>
+                    <li>Intrusion Detection Systems (IDS)</li>
+                    <li>Penetration Testing (Kali Linux, Metasploit)</li>
+                    <li>SSL/TLS & Encryption</li>
+                    <li>System Hardening & Vulnerability Scanning</li>
+                    <li>Linux & Windows Security Best Practices</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Simon. Alle rechten voorbehouden.</p>
+    </footer>
+
+</body>
+</html>

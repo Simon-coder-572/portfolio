@@ -1,0 +1,16 @@
+:root {
+    --achtergrond-zwart: #121212;
+    --achtergrond-grijs: #2c2c2c;
+    --tekst-donker: #121212;
+    --tekst-licht: #ffffff;
+    --tekst-grijs: #b6b6b6;
+    --active-tekst: #5fa3fc;  /* Actieve tekstkleur */  
+    --hooft-kleur-1: #3cb2c7;
+    --hooft-kleur-2: #275eb1;
+    --hooft-kleur-3: #17009b;
+    --primary-color: var(--hooft-kleur-2);  /* Blauwe kleur */
+    --primary-hover: var(--hooft-kleur-3);  /* Donkerdere blauwe kleur */
+    --background-color: var(--achtergrond-zwart); /* Achtergrondkleur */
+    --text-color: var(--tekst-licht);  /* Standaard tekstkleur */
+    --active-text-color: var(--active-tekst); /* Actieve tekstkleur */
+}
