@@ -1,11 +1,85 @@
+/* light mode */
 :root {
+	/* Background-color */
+	--BG-1: #ffffff;
+	--BG-2: #949494;
+	--BG-3: #000000;
+	/* Primary-color */
+	--PC-1: #3cb2c7;
+	--PC-2: ;
+	--PC-3: ;
+	/* Text-color */
+	--TC-1: #000000;
+	--TC-2: ;
+	--TC-3: ;
+	/* element-color */
+	--EC-1: ;
+	--EC-2: ;
+    --EC-3: ;
+	/* Active-text-color */
+	--ATC-1: ;
+	--ATC-2: ;
+    --ATC-3: ;
+	/* Active-element-color */
+	--AEC-1: ;
+	--AEC-2: ;
+    --AEC-3: ;
+}
+
+/* dark mode */
+body.dark-mode {
+	/* Background-color */
+	--BG-1: #000000;
+	--BG-2: #2c2c2c;
+	--BG-3: #ffffff;
+	/* Primary-color */
+	--PC-1: #17009b;
+	--PC-2: ;
+	--PC-3: ;
+	/* Text-color */
+	--TC-1: #ffffff;
+	--TC-2: ;
+	--TC-3: ;
+	/* element-color */
+	--EC-1: ;
+	--EC-2: ;
+    --EC-3: ;
+	/* Active-text-color */
+	--ATC-1: ;
+	--ATC-2: ;
+    --ATC-3: ;
+	/* Active-element-color */
+	--AEC-1: ;
+	--AEC-2: ;
+    --AEC-3: ;
+}
+
+
+/* old code */
+
+:root {
+    --achtergrond-zwart: #ffffff;
+    --achtergrond-grijs: #949494;
+    --tekst-donker: #000000;
+    --tekst-licht: #000000;
+    --tekst-grijs: #000000;
+    --active-tekst: #5fa3fc;  /* Actieve tekstkleur */  
+    --hooft-kleur-2: #3cb2c7;
+    --hooft-kleur-3: #17009b;
+    --primary-color: var(--hooft-kleur-2);  /* Blauwe kleur */
+    --primary-hover: var(--hooft-kleur-3);  /* Donkerdere blauwe kleur */
+    --background-color: var(--achtergrond-zwart); /* Achtergrondkleur */
+    --text-color: var(--tekst-licht);  /* Standaard tekstkleur */
+    --active-text-color: var(--active-tekst); /* Actieve tekstkleur */
+}
+
+body.dark-mode {
     --achtergrond-zwart: #121212;
     --achtergrond-grijs: #2c2c2c;
     --tekst-donker: #121212;
     --tekst-licht: #ffffff;
     --tekst-grijs: #b6b6b6;
     --active-tekst: #5fa3fc;  /* Actieve tekstkleur */  
-    --hooft-kleur-1: #3cb2c7;
     --hooft-kleur-2: #275eb1;
     --hooft-kleur-3: #17009b;
     --primary-color: var(--hooft-kleur-2);  /* Blauwe kleur */

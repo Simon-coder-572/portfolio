@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="src/body/about.css">
     <script defer src="src/translations.js"></script>
     <script defer src="src/navbar/navbar.js"></script>
+    <script defer src="src/navbar/light-dark.js"></script>
     <meta name="description" content="Simon's portfolio showcasing skills, projects, and contact information.">
 </head>
 <body>
 
     <!-- Header -->
     <header><nav>
+
+        <!-- Dark/Light toggle knop -->
+        <div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌞</button>                  
+        </div>
         <ul class="nav-links">
             <li><a href="home.html" data-i18n="home"></a></li>
             <li><a href="about.html" data-i18n="about"></a></li>
@@ -21,12 +27,20 @@
             <li><a href="projects.html" data-i18n="projects"></a></li>
             <li><a href="templates.html" data-i18n="dashboard"></a></li>
             <li><a href="contact.html" data-i18n="contact"></a></li>
-            <li><select id="language" onchange="changeLanguage()"><option value="en">GB: English</option><option value="nl">NL: Nederlands</option></select></li>
+            <div class="select-wrapper">
+                <!-- Language Select blijft zoals je het hebt -->
+                <div class="select" id="languageSelect" tabindex="1">
+                  <input class="selectopt" name="language" type="radio" id="opt1" value="nl" checked onchange="changeLanguage()">
+                  <label for="opt1" class="option">Nederlands</label>
+              
+                  <input class="selectopt" name="language" type="radio" id="opt2" value="en" onchange="changeLanguage()">
+                  <label for="opt2" class="option">English</label>
+            </div>
         </ul>
         <ul class="nav-login">
             <li><a href="login.html" data-i18n="login"></a></li>
         </ul>
-    </nav></header>     
+    </nav></header>
 
     <main>
 

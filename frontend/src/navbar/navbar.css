@@ -2,12 +2,13 @@
 
 /* Algemene navbar styling */
 header {
-    background: linear-gradient(to right, var(--achtergrond-grijs), var(--primary-hover), var(--achtergrond-grijs)); /* Achtergrondkleur met gradient */
+    background: linear-gradient(to right, var(--BG-1), var(--PC-1), var(--BG-1)); /* Achtergrondkleur met gradient */
     padding: 10px 0;  /* Padding boven en onder de header */
     width: 100%;  /* Zorgt ervoor dat de header de volledige breedte van de pagina vult */
     position: relative;  /* Zorgt ervoor dat de header bovenop andere elementen komt */
     z-index: 100;  /* Geeft de header een hoge z-index voor bovenliggende elementen */
     border-radius: 50px;  /* Maakt de hoeken van de header afgerond */
+    height: 50px;
 }
 
 /* Schaduw onder de header */
@@ -18,7 +19,7 @@ header::before {
     top: 100%;  /* Zet het direct onder de header */
     width: 100%;  /* Het schaduw-element vult de volledige breedte van de header */
     height: 20px;  /* Hoogte van de schaduw */
-    background: linear-gradient(to right, var(--achtergrond-grijs), var(--primary-hover), var(--achtergrond-grijs));  /* Zelfde achtergrondkleur als de header */
+    background: linear-gradient(to right, var(--BG-1), var(--PC-1), var(--BG-1));  /* Zelfde achtergrondkleur als de header */
     filter: blur(8px);  /* Maak de schaduw vervaagd */
     border-radius: 50px;  /* Maak de hoeken van de schaduw afgerond */
     opacity: 0.8;  /* Maak de schaduw lichtdoorlatend */
@@ -44,7 +45,7 @@ nav {
 
 /* Algemene link styling */
 .nav-links a {
-    color: var(--text-color);  /* Tekstkleur van de link */
+    color: var(--TC-1);  /* Tekstkleur van de link */
     text-decoration: none;  /* Verwijder de standaard onderstreping van de link */
     font-size: 1rem;  /* Standaard fontgrootte voor de link */
     font-weight: bold;  /* Maak de tekst vet */
@@ -107,76 +108,77 @@ nav {
     color: var(--achtergrond-zwart);  /* Verander de tekstkleur naar zwart wanneer actief */
 }
 
+/* Zorg dat .select naast elkaar komt te staan */
+.select-wrapper {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 110%;
+}
+
 .select {
-    display:flex;
-    flex-direction: column;
-    position:relative;
-    width:250px;
-    height:40px;
-  }
-  
-  .option {
-    padding:0 30px 0 10px;
-    min-height:40px;
-    display:flex;
-    align-items:center;
-    background:#333;
-    border-top:#222 solid 1px;
-    position:absolute;
-    top:0;
-    width: 100%;
-    pointer-events:none;
-    order:2;
-    z-index:1;
-    transition:background .4s ease-in-out;
-    box-sizing:border-box;
-    overflow:hidden;
-    white-space:nowrap;
-    
-  }
-  
-  .option:hover {
-    background:#666;
-  }
-  
-  .select:focus .option {
-    position:relative;
-    pointer-events:all;
-  }
-  
-  input {
-    opacity:0;
-    position:absolute;
-    left:-99999px;
-  }
-  
-  input:checked + label {
-    order: 1;
-    z-index:2;
-    background:#666;
-    border-top:none;
-    position:relative;
-  }
-  
-  input:checked + label:after {
-    content:'';
-    width: 0; 
-      height: 0; 
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid white;
-    position:absolute;
-    right:10px;
-    top:calc(50% - 2.5px);
-    pointer-events:none;
-    z-index:3;
-  }
-  
-  input:checked + label:before {
-    position:absolute;
-    right:0;
-    height: 40px;
-    width: 40px;
-    content: '';
-    background:#666;
-  }
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 150px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.selectopt {
+  display: none;
+}
+
+.option {
+  background-color: var(--achtergrond-zwart);
+  color: var(--text-color);
+  padding: 4px 5px;
+  border-top: 1px solid var(--primary-hover);
+  transition: background 0.3s;
+  display: none;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: var(--primary-hover);
+}
+
+.select:focus-within .option {
+  display: block;
+}
+
+.selectopt:checked + .option {
+  display: block;
+  background-color: var(--primary-hover);
+  order: -1;
+}
+
+.selectopt:checked + .option::after {
+  content: "▼";
+  float: right;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+/* ===== DARK/LIGHT TOGGLE BUTTON ===== */
+#themeToggle {
+  position: absolute;
+  left: 10px;  /* Plaats de toggle-knop 20px vanaf de rechterkant */
+  top: 8px;  /* Plaats de toggle-knop in het midden van de header */
+}
+.theme-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}

@@ -1,4 +1,3 @@
-// translations.js
 const translations = {
     en: {
         // navbar
@@ -11,8 +10,6 @@ const translations = {
         login: "Go to my Dashboard",
 
         //! Home page
-
-        // title
         title: "Welcome to my website",
         title_subtext: "This is my website, where I show my personal and professional details and my projects. I created a simple website with HTML, CSS and JavaScript",
         about_me: "read more about me",
@@ -55,9 +52,8 @@ const translations = {
         templates_5_h2: "title 5",
         templates_5_p: "text 5",
         main_button_3: "Show all templates"
-    
-        // contact
-    }, nl: {
+    },
+    nl: {
         // navbar
         home: "Home",
         about: "Over mij",
@@ -68,8 +64,6 @@ const translations = {
         login: "Ga naar mijn dashboard",
 
         //! Home page
-
-        // title
         title: "Welkom op mijn website",
         title_subtext: "Dit is mijn website, waar ik mijn persoonlijke en professionele details en projecten toon. Ik heb een eenvoudige website gemaakt met HTML, CSS en JavaScript",
         about_me: "Lees meer over mij",
@@ -112,32 +106,44 @@ const translations = {
         templates_5_h2: "title 5",
         templates_5_p: "tekst 5",
         main_button_3: "Alle templates"
-
-        // contact
     }
 };
 
 function changeLanguage() {
     const selectedLanguage = document.querySelector('input[name="language"]:checked').value;
-    localStorage.setItem("selectedLanguage", selectedLanguage); // Opslaan in localStorage
+    localStorage.setItem("selectedLanguage", selectedLanguage);
 
+    // Update vertalingen
     document.querySelectorAll("[data-i18n]").forEach(element => {
         const key = element.getAttribute("data-i18n");
         if (translations[selectedLanguage][key]) {
             element.innerText = translations[selectedLanguage][key];
         }
     });
+
+    // Zet geselecteerde taal bovenaan in dropdown
+    const selectBox = document.getElementById("languageSelect");
+    const checkedInput = selectBox.querySelector(".selectopt:checked");
+    const checkedLabel = selectBox.querySelector(`label[for="${checkedInput.id}"]`);
+    const otherElements = Array.from(selectBox.children).filter(el => el !== checkedInput && el !== checkedLabel);
+
+    selectBox.innerHTML = ""; // Maak selectbox leeg
+    selectBox.appendChild(checkedInput);  // Geselecteerde input bovenaan
+    selectBox.appendChild(checkedLabel);  // bijbehorend label
+    otherElements.forEach(el => selectBox.appendChild(el)); // Rest eronder
+
+    // Sluit dropdown
+    selectBox.blur();
 }
 
-// Automatisch de taal instellen bij pagina laden
 document.addEventListener("DOMContentLoaded", () => {
     const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
-    
-    // Check de juiste radio button op basis van opgeslagen taal
+
+    // Check juiste taal
     const radioToCheck = document.querySelector(`input[name="language"][value="${savedLanguage}"]`);
     if (radioToCheck) {
         radioToCheck.checked = true;
     }
 
-    changeLanguage(); // Pas direct de vertalingen toe
+    changeLanguage(); // Vertalingen toepassen
 });

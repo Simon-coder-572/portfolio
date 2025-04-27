@@ -1,6 +1,6 @@
 services:
-  # Frontend service
   portfolio:
+    image: portfolio-website
     build: .
     ports:
       - "5001:5001"
@@ -8,4 +8,4 @@ services:
       - .:/app
     environment:
       - NODE_ENV=development
-    command: ["node", "backend/public.js"]  # Start de public server
+    command: ["node", "backend/public.js"]
