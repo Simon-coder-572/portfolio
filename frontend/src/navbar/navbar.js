@@ -11,19 +11,34 @@ window.addEventListener("load", function () {
         navIndicator.style.transform = `translateX(${linkRect.left - navRect.left}px)`;
     }
 
+    function findActiveLink() {
+        const currentPage = window.location.pathname.split("/").pop();
+        return [...navLinks].find(link => link.getAttribute("href") === currentPage);
+    }
+
     navLinks.forEach(link => {
         link.addEventListener("mouseenter", () => updateIndicator(link));
-        link.addEventListener("click", () => updateIndicator(link));
+        link.addEventListener("click", () => {
+            navLinks.forEach(l => l.classList.remove("active"));
+            link.classList.add("active");
+            updateIndicator(link);
+        });
     });
 
-    // Actieve pagina highlighten
-    const currentPage = window.location.pathname.split("/").pop();
-    const activeLink = [...navLinks].find(link => link.getAttribute("href") === currentPage);
-
+    // Highlight de huidige pagina
+    const activeLink = findActiveLink();
     if (activeLink) {
         activeLink.classList.add("active");
         updateIndicator(activeLink);
     } else {
         navIndicator.style.width = "0";
     }
+
+    // Update de indicator als het schermformaat verandert
+    window.addEventListener("resize", () => {
+        const active = document.querySelector(".nav-links a.active");
+        if (active) {
+            updateIndicator(active);
+        }
+    });
 });
