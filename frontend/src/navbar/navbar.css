@@ -2,7 +2,7 @@
 
 /* Algemene navbar styling */
 header {
-    background: linear-gradient(to right, var(--BG-1), var(--PC-1), var(--BG-1)); /* Achtergrondkleur met gradient */
+    background: linear-gradient(to right, var(--BG-2), var(--PC-1), var(--BG-2)); /* Achtergrondkleur met gradient */
     padding: 10px 0;  /* Padding boven en onder de header */
     width: 100%;  /* Zorgt ervoor dat de header de volledige breedte van de pagina vult */
     position: relative;  /* Zorgt ervoor dat de header bovenop andere elementen komt */
@@ -19,7 +19,7 @@ header::before {
     top: 100%;  /* Zet het direct onder de header */
     width: 100%;  /* Het schaduw-element vult de volledige breedte van de header */
     height: 20px;  /* Hoogte van de schaduw */
-    background: linear-gradient(to right, var(--BG-1), var(--PC-1), var(--BG-1));  /* Zelfde achtergrondkleur als de header */
+    background: linear-gradient(to right, var(--BG-2), var(--PC-1), var(--BG-2));  /* Zelfde achtergrondkleur als de header */
     filter: blur(8px);  /* Maak de schaduw vervaagd */
     border-radius: 50px;  /* Maak de hoeken van de schaduw afgerond */
     opacity: 0.8;  /* Maak de schaduw lichtdoorlatend */
@@ -60,7 +60,7 @@ nav {
     position: absolute;  /* Plaats de indicator absoluut ten opzichte van de nav-links */
     bottom: -25px;  /* Zet de indicator onder de links */
     height: 5px;  /* Bepaal de hoogte van de indicator */
-    background-color: var(--active-tekst);  /* De kleur van de indicator */
+    background-color: var(--ATC-1);/* De kleur van de indicator */
     width: 0;  /* De breedte van de indicator is aanvankelijk 0 */
     transition: transform 0.3s ease, width 1s ease;  /* Voeg een vloeiende overgang toe voor de breedte en positie van de indicator */
     border-radius: 10px;  /* Maak de hoeken van de indicator afgerond */
@@ -68,7 +68,9 @@ nav {
 
 /* Tekstkleur veranderen wanneer actief */
 .nav-links a.active {
-    color: var(--active-text-color);  /* Verander de tekstkleur wanneer de link actief is */
+    color: var(--ATC-1);  /* Verander de tekstkleur wanneer de link actief is */
+    font-size: 1.1rem; /* Maak de tekst iets groter wanneer actief */
+    transition: font-size 0.3s ease-in-out;  /* Voeg een vloeiende overgang toe voor de kleurverandering */
 }
 
 /* Login-knop naar rechts */
@@ -81,19 +83,20 @@ nav {
 /* Styling van de login-knop */
 .nav-login a {
     display: inline-block;  /* Zet de knop naast andere elementen */
-    color: var(--text-color);  /* Tekstkleur van de knop */
+    color: var(--TC-1);  /* Tekstkleur van de knop */
     text-decoration: none;  /* Verwijder de standaard onderstreping van de link */
     font-size: 1.1rem;  /* Standaard fontgrootte */
-    font-weight: bold;  /* Maak de tekst vet */
     padding: 10px 20px;  /* Padding rondom de tekst in de knop */
     border-radius: 20px;  /* Maak de hoeken van de knop afgerond */
     transition: background-color 1s ease-in-out, transform 0.5s ease-in-out;  /* Voeg een vloeiende overgang toe voor de achtergrondkleur en de transform */
+    font-weight: bold;  /* Maak de tekst vet */
+    font-family: 'Orbitron', sans-serif; /* High-tech font */
 }
 
 /* Hover-effect voor de login-knop */
 .nav-login a:hover {
-    background-color: var(--text-color);  /* Verander de achtergrondkleur bij hover */
-    color: var(--achtergrond-zwart);  /* Verander de tekstkleur naar zwart wanneer actief */
+    background-color: var(--TC-1);  /* Verander de achtergrondkleur bij hover */
+    color: var(--BG-1);  /* Verander de tekstkleur naar zwart wanneer actief */
     transform: scale(1.05);  /* Vergroot de knop lichtjes bij hover */
 }
 
@@ -104,8 +107,8 @@ nav {
 
 /* Styling voor de actieve login-knop */
 .nav-login a.active {
-    background-color: var(--text-color);  /* Verander de achtergrondkleur van de actieve knop */
-    color: var(--achtergrond-zwart);  /* Verander de tekstkleur naar zwart wanneer actief */
+    background-color: var(--TC-1);  /* Verander de achtergrondkleur van de actieve knop */
+    color: var(--BG-1);  /* Verander de tekstkleur naar zwart wanneer actief */
 }
 
 /* Zorg dat .select naast elkaar komt te staan */
@@ -133,17 +136,17 @@ nav {
 }
 
 .option {
-  background-color: var(--achtergrond-zwart);
-  color: var(--text-color);
+  background-color: var(--BG-1);
+  color: var(--TC-1);
   padding: 4px 5px;
-  border-top: 1px solid var(--primary-hover);
+  border-top: 1px solid var(--PC-1);
   transition: background 0.3s;
   display: none;
   cursor: pointer;
 }
 
 .option:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--PC-2);
 }
 
 .select:focus-within .option {
@@ -152,7 +155,7 @@ nav {
 
 .selectopt:checked + .option {
   display: block;
-  background-color: var(--primary-hover);
+  background-color: var(--PC-1);
   order: -1;
 }
 
@@ -174,7 +177,7 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--TC-1);
   transition: color 0.3s ease, transform 0.3s ease;
   margin-left: 10px;
 }

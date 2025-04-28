@@ -2,28 +2,32 @@
 :root {
 	/* Background-color */
 	--BG-1: #ffffff;
-	--BG-2: #949494;
+	--BG-2: #c2c2c2;
 	--BG-3: #000000;
 	/* Primary-color */
 	--PC-1: #3cb2c7;
-	--PC-2: ;
+	--PC-2: #275eb1;
 	--PC-3: ;
 	/* Text-color */
 	--TC-1: #000000;
 	--TC-2: ;
-	--TC-3: ;
+	--TC-3: #ffffff;
 	/* element-color */
 	--EC-1: ;
 	--EC-2: ;
     --EC-3: ;
 	/* Active-text-color */
-	--ATC-1: ;
+	--ATC-1: #275eb1;
 	--ATC-2: ;
     --ATC-3: ;
 	/* Active-element-color */
 	--AEC-1: ;
 	--AEC-2: ;
     --AEC-3: ;
+	/* image */
+	--img-1: url('/images/Logo.png');
+	--img-2: url('/images/Logo.png');
+	--img-3: url('/images/Logo.png');
 }
 
 /* dark mode */
@@ -31,27 +35,31 @@ body.dark-mode {
 	/* Background-color */
 	--BG-1: #000000;
 	--BG-2: #2c2c2c;
-	--BG-3: #ffffff;
+	--BG-3: #a3a3a3;
 	/* Primary-color */
 	--PC-1: #17009b;
-	--PC-2: ;
+	--PC-2: #275eb1;
 	--PC-3: ;
 	/* Text-color */
 	--TC-1: #ffffff;
 	--TC-2: ;
-	--TC-3: ;
+	--TC-3: #000000;
 	/* element-color */
 	--EC-1: ;
 	--EC-2: ;
     --EC-3: ;
 	/* Active-text-color */
-	--ATC-1: ;
+	--ATC-1: #0051ff;
 	--ATC-2: ;
     --ATC-3: ;
 	/* Active-element-color */
 	--AEC-1: ;
 	--AEC-2: ;
     --AEC-3: ;
+	/* image */
+	--img-1: url('/images/Logo.png');
+	--img-2: url('/images/Logo.png');
+	--img-3: url('/images/Logo.png');
 }
 
 

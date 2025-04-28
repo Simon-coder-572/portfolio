@@ -5,21 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servernetwerksimon</title>
     <link rel="stylesheet" href="src/navbar/navbar.css">
-    <link rel="stylesheet" href="src/body/index.css">
+    <link rel="stylesheet" href="src/body/home.css">
     <script defer src="src/translations.js"></script>
     <script defer src="src/navbar/navbar.js"></script>
     <script defer src="src/navbar/light-dark.js"></script>
     <meta name="description" content="Simon's portfolio showcasing skills, projects, and contact information.">
 </head>
 <body>
-
+    
     <!-- Header -->
     <header><nav>
-
-        <!-- Dark/Light toggle knop -->
-        <div>
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌞</button>                  
-        </div>
+        <div><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌞</button></div>
         <ul class="nav-links">
             <li><a href="home.html" data-i18n="home"></a></li>
             <li><a href="about.html" data-i18n="about"></a></li>
@@ -27,19 +23,11 @@
             <li><a href="projects.html" data-i18n="projects"></a></li>
             <li><a href="templates.html" data-i18n="dashboard"></a></li>
             <li><a href="contact.html" data-i18n="contact"></a></li>
-            <div class="select-wrapper">
-                <!-- Language Select blijft zoals je het hebt -->
-                <div class="select" id="languageSelect" tabindex="1">
-                  <input class="selectopt" name="language" type="radio" id="opt1" value="nl" checked onchange="changeLanguage()">
-                  <label for="opt1" class="option">Nederlands</label>
-              
-                  <input class="selectopt" name="language" type="radio" id="opt2" value="en" onchange="changeLanguage()">
-                  <label for="opt2" class="option">English</label>
-            </div>
-        </ul>
-        <ul class="nav-login">
-            <li><a href="login.html" data-i18n="login"></a></li>
-        </ul>
+            <div class="select-wrapper"><div class="select" id="languageSelect" tabindex="1">
+            <input class="selectopt" name="language" type="radio" id="opt1" value="nl" checked onchange="changeLanguage()"><label for="opt1" class="option">Nederlands</label>
+            <input class="selectopt" name="language" type="radio" id="opt2" value="en" onchange="changeLanguage()"><label for="opt2" class="option">English</label>
+        </div></ul>
+        <ul class="nav-login"><li><a href="login.html" data-i18n="login"></a></li></ul>
     </nav></header>    
     
     <!-- Main Section -->
