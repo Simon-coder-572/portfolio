@@ -258,8 +258,6 @@ p {
     z-index: -1; /* Dit plaatst het boven de gloed maar achter de content */
 }
 
-/*! vanaf hier moet ik die variables weer doen daar boven zijn de kleuren al goed */
-
 .templates-box::after {
     content: "";
     position: absolute;
@@ -268,7 +266,7 @@ p {
     right: -5px;
     bottom: -5px;
     border-radius: 10px;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.0), var(--hooft-kleur-1), rgba(0, 0, 0, 0));
+    background: linear-gradient(to left, var(--BG-1), var(--PC-1), var(--BG-1));
     z-index: -5; /* Plaatst de gloed achter het element */
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -300,20 +298,20 @@ p {
     width: 100%;
     margin: 0;
     font-size: 1.2em;
-    color: var(--tekst-licht);
+    color: var(--TC-1);
 }
 
 .templates-box p {
     width: 100%;
     margin: 5px 0 0;
-    color: var(--tekst-grijs);
+    color: var(--TC-1);
 }
 
 .main_button_3 {
     text-align: center;
     width: 100%;
     font-size: xx-large;
-    -webkit-text-fill-color: var(--tekst-licht);
+    -webkit-text-fill-color: var(--TC-1);
     font-family: 'Times New Roman', Times, serif;
 }
 
