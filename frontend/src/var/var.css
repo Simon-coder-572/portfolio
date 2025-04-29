@@ -37,8 +37,8 @@ body.dark-mode {
 	--BG-2: #2c2c2c;
 	--BG-3: #a3a3a3;
 	/* Primary-color */
-	--PC-1: #17009b;
-	--PC-2: #275eb1;
+	--PC-1: #1351af;
+	--PC-2: #277ab1;
 	--PC-3: ;
 	/* Text-color */
 	--TC-1: #ffffff;
@@ -49,7 +49,7 @@ body.dark-mode {
 	--EC-2: ;
     --EC-3: ;
 	/* Active-text-color */
-	--ATC-1: #0051ff;
+	--ATC-1: #0066ff;
 	--ATC-2: ;
     --ATC-3: ;
 	/* Active-element-color */
