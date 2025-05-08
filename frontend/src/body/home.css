@@ -24,7 +24,7 @@ body {
     letter-spacing: 2px;
 }
 
-.hero subtext {
+.hero .subtext {
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -87,6 +87,12 @@ body {
     border-radius: 15px;
     padding: 20px;
     transition: box-shadow 1s ease-in-out, background-color 0.6s ease-in-out, color 0.8s ease-in-out;  /* Voeg een vloeiende overgang toe voor de kleurverandering */
+}
+
+.dashboard-subtitle-2 {
+    color: var(--TC-2);
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .dashboard a:hover {

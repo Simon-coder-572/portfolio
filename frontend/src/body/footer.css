@@ -1,0 +1,106 @@
+/* Zorg ervoor dat de body en html de volledige breedte en hoogte innemen */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: var(--BG-2);
+    color: var(--TC-1);
+    padding: 40px 5% 20px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 60px;
+    width: 100%; /* Zorg ervoor dat de footer 100% breed is */
+    box-sizing: border-box; /* Zorg ervoor dat de padding niet de breedte beïnvloedt */
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 200px;
+}
+
+footer div a {
+    color: var(--TC-1);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer div a:hover {
+    color: var(--PC-1);
+}
+
+.footer-contact {
+    flex: 1 1 100%;
+    margin-top: 10px;
+}
+
+.footer-contact h3 {
+    color: var(--PC-1);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--TC-1);
+}
+
+.footer-contact a {
+    color: var(--PC-1);
+    text-decoration: underline;
+}
+
+.footer-contact a:hover {
+    color: var(--TC-2);
+}
+
+footer .copyright {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 30px;
+    color: var(--TC-2);
+    border-top: 1px solid var(--BG-3);
+    padding-top: 15px;
+}
+
+.bold_text_footer {
+    font-weight: bold;
+}
+
+.footer-left {
+    flex: 1 1 300px;
+}
+
+.footer-right {
+    flex: 1 1 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.footer-right > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .footer-left,
+    .footer-right {
+        flex: 1 1 100%;
+    }
+
+    .footer-right {
+        grid-template-columns: 1fr;
+    }
+}

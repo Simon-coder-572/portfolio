@@ -1,5 +1,7 @@
 const translations = {
     en: {
+        //! all pages
+
         // navbar
         home: "Home",
         about: "About Me",
@@ -9,6 +11,22 @@ const translations = {
         contact: "Contact",
         login: "Go to my Dashboard",
 
+        // footer
+
+        github: "GitHub",
+        instagram: "Instagram",
+        youtube: "YouTube",
+        linkedin: "LinkedIn",
+        business_contact_title: "Business Contact: ",
+        business_name: "SB Server Solutions",
+        freelance_it_services: "IT services for small businesses and individuals on request",
+        email_title: "Email: ",
+        location_title: "Location: ",
+        Location: "Netherlands",
+        availability_title: "Availability: ",
+        working_hours: "Mon-Fri: within 4 business days",
+        copyright: "© 2025 SB Server Solutions - Simon. All rights reserved.",
+
         //! Home page
         title: "Welcome to my website",
         title_subtext: "This is my website, where I show my personal and professional details and my projects. I created a simple website with HTML, CSS and JavaScript",
@@ -16,7 +34,8 @@ const translations = {
 
         // dahboard
         dashboard_title: "check out my dashboard",
-        dashboard_subtitle: "on my dashboard website, you can get your own dashboard and connect directly to my services. NOTE: this is only available on request for friends and family.",
+        dashboard_subtitle: "on my dashboard website, you can get your own dashboard and connect directly to my services.",
+        dashboard_subtitle_2: "NOTE: This is only available on special request and not meant for everyone.",
         dashboard_button: "go to my dashboard",        
 
         // skills
@@ -51,9 +70,16 @@ const translations = {
         templates_4_p: "text 4",
         templates_5_h2: "title 5",
         templates_5_p: "text 5",
-        main_button_3: "Show all templates"
+        main_button_3: "Show all templates",
+
+        //! About me
+        about_me_title: "About Me",
+        about_me_intro: "I am a passionate developer with a strong interest in technology and innovation. I love to learn new things and apply them in my projects. My goal is to create impactful solutions that make a difference."
+
     },
     nl: {
+        //! alle pagina's
+
         // navbar
         home: "Home",
         about: "Over mij",
@@ -63,6 +89,21 @@ const translations = {
         contact: "Contact",
         login: "Ga naar mijn dashboard",
 
+        // footer
+        github: "GitHub",
+        instagram: "Instagram",
+        youtube: "YouTube",
+        linkedin: "LinkedIn",
+        business_contact_title: "Zakelijk contact: ",
+        business_name: "SB Server Solutions",
+        freelance_it_services: "IT-diensten voor kleine bedrijven en particulieren op aanvraag",
+        email_title: "E-mail: ",
+        location_title: "Locatie: ",
+        Location: "Nederland",
+        availability_title: "Bereikbaar: ",
+        working_hours: "Ma-vr: binnen 4 werkdagen",
+        copyright: "© 2025 SB Server Solutions - Simon. Alle rechten voorbehouden.",
+
         //! Home page
         title: "Welkom op mijn website",
         title_subtext: "Dit is mijn website, waar ik mijn persoonlijke en professionele details en projecten toon. Ik heb een eenvoudige website gemaakt met HTML, CSS en JavaScript",
@@ -70,7 +111,8 @@ const translations = {
 
         // dahboard
         dashboard_title: "bekijk mijn dashboard",
-        dashboard_subtitle: "Op mijn dashboard-website kun je je eigen dashboard aanvragen en direct verbinding maken met mijn services. Let op: dit is exclusief beschikbaar op aanvraag voor vrienden en familie.",
+        dashboard_subtitle: "Op mijn dashboard-website kun je je eigen dashboard aanvragen en direct verbinding maken met mijn services.",
+        dashboard_subtitle_2: "BELANGERIJK: Dit is alleen beschikbaar op speciale aanvraag en niet bedoeld voor iedereen.",
         dashboard_button: "ga naar mijn dashboard",        
 
         // skills
@@ -105,7 +147,11 @@ const translations = {
         templates_4_p: "tekst 4",
         templates_5_h2: "title 5",
         templates_5_p: "tekst 5",
-        main_button_3: "Alle templates"
+        main_button_3: "Alle templates",
+
+        //! About me
+        about_me_title: "Over mij",
+        about_me_intro: "Ik ben een gepassioneerde ontwikkelaar met een sterke interesse in technologie en innovatie. Ik hou ervan om nieuwe dingen te leren en deze toe te passen in mijn projecten. Mijn doel is om impactvolle oplossingen te creëren die een verschil maken."
     }
 };
 
