@@ -1,114 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servernetwerksimon - Under Development</title>
-  <link rel="stylesheet" href="src/navbar/navbar.css">
-  <script defer src="src/translations.js"></script>
-  <script defer src="src/navbar/light-dark.js"></script>
-  <style>
-    body {
-      background-color: var(--BG-1);
-      color: var(--TC-1);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .container {
-      max-width: 600px;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--PC-1);
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .controls {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    button {
-      background: var(--PC-1);
-      color: var(--TC-3);
-      border: none;
-      padding: 0.8rem 1.2rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: var(--PC-2);
-    }
-
-    footer {
-      position: absolute;
-      bottom: 15px;
-      font-size: 0.9rem;
-      color: var(--TC-1);
-      opacity: 0.7;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="container">
-    <h1 data-i18n="dev_title">🚧 Website Under Development 🚧</h1>
-    <p data-i18n="dev_message">I’m working hard to finish this page. Check back soon!</p>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <div class="text-center max-w-lg p-6">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">🚀 Coming Soon</h1>
+    <p class="text-lg md:text-xl mb-6 text-gray-300">Our website is still under construction, but we’re dropping on <span class="font-semibold text-white">December 1st</span>.</p>
 
-    <div class="controls">
-      <!-- Theme toggle -->
-      <button id="themeToggle" aria-label="Toggle dark mode">🌞</button>
-
-      <!-- Language select -->
-      <select id="languageSelect" onchange="changeLanguage()">
-        <option value="en">English</option>
-        <option value="nl" selected>Nederlands</option>
-      </select>
+    <!-- Countdown -->
+    <div id="countdown" class="grid grid-cols-4 gap-4 justify-center mb-8">
+      <div class="bg-gray-800 rounded-2xl p-4 shadow">
+        <span id="days" class="text-3xl font-bold">0</span>
+        <p class="text-gray-400 text-sm">Days</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-4 shadow">
+        <span id="hours" class="text-3xl font-bold">0</span>
+        <p class="text-gray-400 text-sm">Hours</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-4 shadow">
+        <span id="minutes" class="text-3xl font-bold">0</span>
+        <p class="text-gray-400 text-sm">Minutes</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-4 shadow">
+        <span id="seconds" class="text-3xl font-bold">0</span>
+        <p class="text-gray-400 text-sm">Seconds</p>
+      </div>
     </div>
+
+    <p class="text-gray-400">Stay tuned for updates!</p>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Servernetwerksimon</p>
-  </footer>
-
   <script>
-    // Dummy translation support
-    function changeLanguage() {
-      const lang = document.getElementById("languageSelect").value;
-      if (lang === "nl") {
-        document.querySelector("[data-i18n='dev_title']").textContent = "🚧 Website in ontwikkeling 🚧";
-        document.querySelector("[data-i18n='dev_message']").textContent = "Ik werk hard om deze pagina af te maken. Kom binnenkort terug!";
-      } else {
-        document.querySelector("[data-i18n='dev_title']").textContent = "🚧 Website Under Development 🚧";
-        document.querySelector("[data-i18n='dev_message']").textContent = "I’m working hard to finish this page. Check back soon!";
-      }
+    // Countdown logic
+    const targetDate = new Date("Dec 1, 2025 00:00:00").getTime();
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) return;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysEl.textContent = days;
+      hoursEl.textContent = hours;
+      minutesEl.textContent = minutes;
+      secondsEl.textContent = seconds;
     }
 
-    // Light/Dark mode toggle
-    const themeToggle = document.getElementById("themeToggle");
-    themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      themeToggle.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "🌞";
-    });
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
   </script>
 </body>
 </html>
