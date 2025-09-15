@@ -1,6 +1,0 @@
-@import url(../var/var.css);
-
-body {
-    background-color: var(--achtergrond-zwart);
-    color: var(--tekst-licht)
-}
