@@ -1,11 +1,7 @@
 services:
-  portfolio:
-    image: portfolio-website
-    build: .
+  web:
+    image: nginx:alpine
     ports:
-      - "5001:5001"
+      - "8080:80"
     volumes:
-      - .:/app
-    environment:
-      - NODE_ENV=development
-    command: ["node", "backend/public.js"]
+      - ./frontend:/usr/share/nginx/html:ro
