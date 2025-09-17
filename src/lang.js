@@ -23,7 +23,7 @@ const translations = {
     projects: "Projecten",
     contact: "Contact",
     heroName: "Simon Bloem",
-    heroTitle: "Full Stack Ontwikkelaar & Serverbeheerder",
+    heroTitle: "Full Stack Developer & Serverbeheerder",
     heroDescription: "Ik ben een gepassioneerde ontwikkelaar die graag mooie, functionele en gebruiksvriendelijke digitale ervaringen creëert. Met expertise in moderne webtechnologieën breng ik ideeën tot leven door middel van schone code en doordacht ontwerp.",
     heroButton1: "Bekijk mijn projecten",
     heroButton2: "Neem contact op"
