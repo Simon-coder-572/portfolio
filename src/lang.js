@@ -10,7 +10,7 @@ const translations = {
     contact: "Contact",
     heroName: "Simon Bloem",
     heroTitle: "Full Stack Developer & Server Administrator",
-    heroDescription: "I'm a passionate developer who loves creating beautiful, functional, and user-centered digital experiences. With expertise in modern web technologies, I bring ideas to life through clean code and thoughtful design.",
+    heroDescription: "I am a student at the Hogeschool van Amsterdam, studying Software Engineering. My goal is to become a full-stack developer. In my free time, I enjoy setting up and managing my homelab, which helps me further improve my coding and server management skills.",
     heroButton1: "View my projects",
     heroButton2: "Contact me",
   },
@@ -24,7 +24,7 @@ const translations = {
     contact: "Contact",
     heroName: "Simon Bloem",
     heroTitle: "Full Stack Developer & Serverbeheerder",
-    heroDescription: "Ik ben een gepassioneerde ontwikkelaar die graag mooie, functionele en gebruiksvriendelijke digitale ervaringen creëert. Met expertise in moderne webtechnologieën breng ik ideeën tot leven door middel van schone code en doordacht ontwerp.",
+    heroDescription: "Ik ben student aan de Hogeschool van Amsterdam, waar ik de opleiding Software Engineering volg. Mijn doel is om een full-stack developer te worden. In mijn vrije tijd houd ik me bezig met het opzetten en beheren van mijn homelab, waarmee ik mijn programmeer- en serverbeheer-skills verder ontwikkel.",
     heroButton1: "Bekijk mijn projecten",
     heroButton2: "Neem contact op"
   },

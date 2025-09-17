@@ -29,7 +29,7 @@ export function HeroSection() {
           <p className="hero-description">{translations[lang].heroDescription}</p>
 
           <div className="hero-buttons">
-            <button className="btn btn-primary" onClick={() => navigate("/projects")}>{translations[lang].heroButton1}</button>
+            <button className="btn btn-outline" onClick={() => navigate("/projects")}>{translations[lang].heroButton1}</button>
             <button className="btn btn-outline" onClick={() => navigate("/contact")}>{translations[lang].heroButton2}</button>
           </div>
 

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useContext } from "react";
-import { NavLink, useLocation } from "react-router-dom"; // ✅ useLocation toegevoegd
+import { NavLink, useLocation } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import translations from "../lang";
 import "../styles/Navbar.css";
@@ -12,8 +12,8 @@ export default function Navbar() {
   const underlineRef = useRef(null);
   const mobileSliderRef = useRef(null);
 
-  const location = useLocation(); // ✅ React Router hook voor huidige path
-  const [activePath, setActivePath] = useState(location.pathname); // init met huidige path
+  const location = useLocation();
+  const [activePath, setActivePath] = useState(location.pathname);
   const [time, setTime] = useState(new Date());
   const [is24Hour, setIs24Hour] = useState(
     () => localStorage.getItem("is24Hour") === "true"
@@ -27,12 +27,10 @@ export default function Navbar() {
     { path: "/contact", label: "contact" },
   ];
 
-  // Update activePath bij route-wijziging
   useEffect(() => {
-    setActivePath(location.pathname); // ✅ underline positioneert opnieuw
+    setActivePath(location.pathname);
   }, [location]);
 
-  // Update clock
   useEffect(() => {
     const interval = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(interval);
@@ -58,7 +56,6 @@ export default function Navbar() {
     mobileSliderRef.current.style.height = `${rect.height}px`;
   };
 
-  // underline positioneren bij activePath update
   useEffect(() => {
     const activeLink = linksRef.current.querySelector(`a[href="${activePath}"]`);
     if (activeLink) {
@@ -67,7 +64,7 @@ export default function Navbar() {
     }
   }, [activePath, lang]);
 
-  // Klik buiten sluit menu
+  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
@@ -82,6 +79,31 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Reset underline when mouse leaves navbar
+  useEffect(() => {
+    const handleMouseLeaveNavbar = () => {
+      const activeLink = linksRef.current.querySelector(`a[href="${activePath}"]`);
+      if (activeLink) moveUnderline(activeLink);
+    };
+
+    const navbarEl = linksRef.current;
+    if (navbarEl) {
+      navbarEl.addEventListener("mouseleave", handleMouseLeaveNavbar);
+    }
+
+    return () => {
+      if (navbarEl) {
+        navbarEl.removeEventListener("mouseleave", handleMouseLeaveNavbar);
+      }
+    };
+  }, [activePath]);
+
+  // Toggle button helper (closes menu in mobile)
+  const handleToggleClick = (callback) => {
+    callback();
+    setIsOpen(false);
+  };
+
   return (
     <nav>
       <div className="navbar">
@@ -89,7 +111,7 @@ export default function Navbar() {
           <img src="src/assets/Servernet-logo-noBG.svg" alt="Logo" className="logo" />
           <p
             className="live-clock"
-            onClick={() => setIs24Hour(!is24Hour)}
+            onClick={() => handleToggleClick(() => setIs24Hour(!is24Hour))}
             style={{ cursor: "pointer" }}
           >
             {time.toLocaleTimeString([], {
@@ -107,7 +129,10 @@ export default function Navbar() {
           </NavLink>
         </h2>
 
-        <button className={`hamburger ${isOpen ? "active" : ""}`} onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className={`hamburger ${isOpen ? "active" : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           ☰
         </button>
 
@@ -131,13 +156,24 @@ export default function Navbar() {
           <div className="mobile-slider" ref={mobileSliderRef}></div>
 
           <div className="toggles">
-            <button className="mode-toggle" onClick={() => setDarkMode(!darkMode)}>
+            <button
+              className="mode-toggle"
+              onClick={() => handleToggleClick(() => setDarkMode(!darkMode))}
+            >
               {darkMode ? "☀️" : "🌙"}
             </button>
-            <button className="lang-toggle" onClick={() => setLang(lang === "EN" ? "NL" : "EN")}>
+            <button
+              className="lang-toggle"
+              onClick={() =>
+                handleToggleClick(() => setLang(lang === "EN" ? "NL" : "EN"))
+              }
+            >
               {lang}
             </button>
-            <button className="time-toggle" onClick={() => setIs24Hour(!is24Hour)}>
+            <button
+              className="time-toggle"
+              onClick={() => handleToggleClick(() => setIs24Hour(!is24Hour))}
+            >
               {is24Hour ? "24" : "12"}
             </button>
           </div>
