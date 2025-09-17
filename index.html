@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="en">
   <body>
+    <!-- index.html (head) -->
+<script>
+  (function(){
+    try {
+      // lees cookie darkMode (native)
+      const match = document.cookie.match('(^|;)\\s*' + 'darkMode' + '\\s*=\\s*([^;]+)');
+      const cookieVal = match ? decodeURIComponent(match.pop()) : null;
+      const prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const useDark = cookieVal === null ? prefers : (cookieVal === 'true');
+      document.documentElement.setAttribute('data-theme', useDark ? 'dark' : 'light');
+    } catch(e) { /* fail silently */ }
+  })();
+</script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -1,0 +1,22 @@
+/* theme.css: centraal thema (importeer dit als eerste in main.jsx) */
+:root{
+  /* Light (default) */
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --accent-color: #0077ff;
+
+  --nav-bg: rgba(255,255,255,0.92);
+  --nav-text: var(--text-color);
+  --card-bg: #f8f8f8;
+}
+
+/* Dark theme values */
+[data-theme="dark"]{
+  --bg-color: #0b0b0b;
+  --text-color: #f1f1f1;
+  --accent-color: #00c3ff;
+
+  --nav-bg: rgba(54, 54, 54, 0.82);
+  --nav-text: var(--text-color);
+  --card-bg: #101010;
+}

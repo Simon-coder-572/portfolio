@@ -1,8 +1,6 @@
 export default function Home() {
   return (
     <div>
-            {/* Add spacing with CSS instead of "/n" */}
-      <div style={{ margin: "5rem 0" }}></div>
       <h1>Home Page</h1>
       <p>Welcome to my portfolio website!</p>
 

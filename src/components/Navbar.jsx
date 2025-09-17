@@ -1,27 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import Cookies from "js-cookie";          // npm install js-cookie
-import translations from "../lang";       // importeer lang file
+import { NavLink } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
+import { useContext } from "react";
+import translations from "../lang";
 import "../styles/Navbar.css";
 
 export default function Navbar() {
-  // Load settings from cookies (fallback: dark+EN)
-  const [darkMode, setDarkMode] = useState(Cookies.get("darkMode") === "true");
-  const [lang, setLang] = useState(Cookies.get("lang") || "EN");
+  const { darkMode, setDarkMode, lang, setLang } = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Update cookie when darkMode changes
-  useEffect(() => {
-    Cookies.set("darkMode", darkMode, { expires: 365 });
-  }, [darkMode]);
-
-  // Update cookie when lang changes
-  useEffect(() => {
-    Cookies.set("lang", lang, { expires: 365 });
-  }, [lang]);
+  // Helper voor NavLink class
+  const getNavLinkClass = ({ isActive }) => (isActive ? "active" : "");
 
   return (
-    <nav className={darkMode ? "dark" : "light"}>
+    <nav>
       <div className="navbar">
         <img
           src="src/assets/Servernet-logo-noBG.svg"
@@ -39,21 +32,41 @@ export default function Navbar() {
 
         {/* Links */}
         <div className={`links ${isOpen ? "active" : ""}`}>
-          <Link to="/" onClick={() => setIsOpen(false)}>
+          <NavLink
+            to="/"
+            className={getNavLinkClass}
+            onClick={() => setIsOpen(false)}
+          >
             {translations[lang].home}
-          </Link>
-          <Link to="/about" onClick={() => setIsOpen(false)}>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={getNavLinkClass}
+            onClick={() => setIsOpen(false)}
+          >
             {translations[lang].about}
-          </Link>
-          <Link to="/skills" onClick={() => setIsOpen(false)}>
+          </NavLink>
+          <NavLink
+            to="/skills"
+            className={getNavLinkClass}
+            onClick={() => setIsOpen(false)}
+          >
             {translations[lang].skills}
-          </Link>
-          <Link to="/projects" onClick={() => setIsOpen(false)}>
+          </NavLink>
+          <NavLink
+            to="/projects"
+            className={getNavLinkClass}
+            onClick={() => setIsOpen(false)}
+          >
             {translations[lang].projects}
-          </Link>
-          <Link to="/contact" onClick={() => setIsOpen(false)}>
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={getNavLinkClass}
+            onClick={() => setIsOpen(false)}
+          >
             {translations[lang].contact}
-          </Link>
+          </NavLink>
 
           {/* Toggles */}
           <div className="toggles">
