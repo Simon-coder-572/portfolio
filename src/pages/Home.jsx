@@ -15,7 +15,6 @@ export default function Home() {
         <p>
           Welcome to my portfolio website. Scroll down to see my projects and skills.
         </p>
-        <p style={{ padding: "100rem" }}> testing</p>
       </main>
     </div>
   );
