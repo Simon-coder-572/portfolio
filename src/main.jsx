@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppProvider } from "./context/AppContext.jsx";
 import Navbar from './components/Navbar';
+import Footer from './components/Footer.jsx';
 import Home from './pages/Home';
 import About from './pages/About';
 import Skills from './pages/Skills';
@@ -14,7 +15,6 @@ import "./styles/Navbar.css";   // overige component css
 
 createRoot(document.getElementById('root')).render(
   <AppProvider>
-    <div style={{ margin: "5rem 0" }}></div>
     <Router>
       <Navbar />
         <Routes>
@@ -24,6 +24,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+      <Footer />
     </Router>
   </AppProvider>
 );

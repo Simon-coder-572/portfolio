@@ -1,22 +1,30 @@
-/* theme.css: centraal thema (importeer dit als eerste in main.jsx) */
-:root{
-  /* Light (default) */
-  --bg-color: #ffffff;
-  --text-color: #111111;
-  --accent-color: #0077ff;
+/* theme.css: centraal thema */
+:root {
+  /* Light Theme (default) */
+  --bg-color: #f5f5f5;           /* algemene achtergrond */
+  --text-color: #111111;         /* hoofdtekst */
+  --text-color-soft: #333333;    /* iets zachtere tekst */
+  --accent-color: #4399fc;       /* MUI blauw */
+  --secondary-color: #90caf9;    /* lichtere accentkleur */
 
-  --nav-bg: rgba(255,255,255,0.92);
+  --nav-bg: rgba(255, 255, 255, 0.8);  /* glass navbar */
   --nav-text: var(--text-color);
-  --card-bg: #f8f8f8;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --shadow-color: rgb(67, 153, 252, 0.2);
+  --toggle-bg: rgba(255, 255, 255, 0.15);
 }
 
 /* Dark theme values */
-[data-theme="dark"]{
-  --bg-color: #0b0b0b;
-  --text-color: #f1f1f1;
-  --accent-color: #00c3ff;
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --text-color-soft: #cccccc;
+  --accent-color: #4399fc;       /* iets lichtere accentkleur voor contrast */
+  --secondary-color: #1976d2;
 
-  --nav-bg: rgba(54, 54, 54, 0.82);
+  --nav-bg: rgba(18, 18, 18, 0.8);
   --nav-text: var(--text-color);
-  --card-bg: #101010;
+  --card-bg: rgba(30, 30, 30, 0.85);
+  --shadow-color: rgb(67, 153, 252, 0.2);
+  --toggle-bg: rgba(255, 255, 255, 0.1);
 }

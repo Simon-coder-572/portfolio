@@ -1,13 +1,22 @@
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
+import translations from "../lang";
+import { HeroSection } from "../components/HeroSection";
+
 export default function Home() {
+  const { lang } = useContext(AppContext);
+
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Welcome to my portfolio website!</p>
+      <HeroSection /> {/* bovenaan */}
 
-      {/* Add spacing with CSS instead of "/n" */}
-      <div style={{ margin: "800rem 0" }}></div>
-
-      <p>Explore my projects and skills through the navigation bar above.</p>
+      <main> 
+        <h1>{translations[lang].homeTitle}</h1>
+        <p>
+          Welcome to my portfolio website. Scroll down to see my projects and skills.
+        </p>
+        <p style={{ padding: "100rem" }}> testing</p>
+      </main>
     </div>
   );
 }
