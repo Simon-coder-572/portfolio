@@ -1,0 +1,112 @@
+.skills-page {
+  margin-top: 6rem;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-color-soft);
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background: var(--bg-color-soft);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.tab-button.active {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px var(--shadow-color);
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill span {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  background: var(--bg-color-soft);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-color);
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--secondary-color);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+
+.soft-skill {
+  padding: 8px 10px;
+  background: var(--bg-color-soft);
+  border-radius: 5px;
+  margin-bottom: 6px;
+}
+
+.badge.active {
+  background-color: green;
+}
