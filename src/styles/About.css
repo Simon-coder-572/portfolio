@@ -1,0 +1,148 @@
+.about {
+  padding: 80px 20px 60px;
+  background: var(--bg-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 5rem;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px var(--shadow-color);
+  margin-bottom: 20px;
+}
+
+.card h2, .card h3 {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.card p {
+    color: var(--text-color-soft);
+}
+
+/* Timeline */
+.timeline .item {
+  border-left: 3px solid var(--accent-color);
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.timeline .subtitle {
+  font-size: 0.9rem;
+  color: var(--text-color-soft);
+  margin: 5px 0 10px;
+}
+
+/* Sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--text-color-soft);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.languages {
+  list-style: none;
+  padding: 0;
+}
+
+.languages li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.badge {
+  background: var(--accent-color);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.badge.secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+/* Company Table */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.company-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--shadow-color);
+  color: var(--text-color);
+}
+
+.company-table td:first-child {
+  font-weight: bold;
+  width: 35%;
+}
+
+.contact-link a {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.contact-link a:hover {
+  background: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main, .sidebar {
+    width: 100%;
+  }
+
+  .company-table td:first-child {
+    width: 40%;
+  }
+}

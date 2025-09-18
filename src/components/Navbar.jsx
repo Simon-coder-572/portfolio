@@ -6,6 +6,7 @@ import "../styles/Navbar.css";
 
 export default function Navbar() {
   const { darkMode, setDarkMode, lang, setLang } = useContext(AppContext);
+  const t = translations[lang];
   const [isOpen, setIsOpen] = useState(false);
 
   const linksRef = useRef(null);
@@ -45,7 +46,9 @@ export default function Navbar() {
     const rect = target.getBoundingClientRect();
     const parentRect = linksRef.current.getBoundingClientRect();
     underlineRef.current.style.width = `${rect.width}px`;
-    underlineRef.current.style.transform = `translateX(${rect.left - parentRect.left}px)`;
+    underlineRef.current.style.transform = `translateX(${
+      rect.left - parentRect.left
+    }px)`;
   };
 
   const moveMobileSlider = (target) => {
@@ -57,7 +60,9 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    const activeLink = linksRef.current.querySelector(`a[href="${activePath}"]`);
+    const activeLink = linksRef.current.querySelector(
+      `a[href="${activePath}"]`
+    );
     if (activeLink) {
       moveUnderline(activeLink);
       if (window.innerWidth <= 900) moveMobileSlider(activeLink);
@@ -82,7 +87,9 @@ export default function Navbar() {
   // Reset underline when mouse leaves navbar
   useEffect(() => {
     const handleMouseLeaveNavbar = () => {
-      const activeLink = linksRef.current.querySelector(`a[href="${activePath}"]`);
+      const activeLink = linksRef.current.querySelector(
+        `a[href="${activePath}"]`
+      );
       if (activeLink) moveUnderline(activeLink);
     };
 
@@ -108,7 +115,11 @@ export default function Navbar() {
     <nav>
       <div className="navbar">
         <div className="logo-container">
-          <img src="src/assets/Servernet-logo-noBG.svg" alt="Logo" className="logo" />
+          <img
+            src="src/assets/Servernet-logo-noBG.svg"
+            alt="Logo"
+            className="logo"
+          />
           <p
             className="live-clock"
             onClick={() => handleToggleClick(() => setIs24Hour(!is24Hour))}
@@ -125,7 +136,7 @@ export default function Navbar() {
 
         <h2 className="logo-text">
           <NavLink to="/" className="logo-link">
-            {translations[lang].title}
+            {t.title}
           </NavLink>
         </h2>
 
@@ -148,7 +159,7 @@ export default function Navbar() {
                 else moveMobileSlider(e.currentTarget);
               }}
             >
-              {translations[lang][item.label]}
+              {t[item.label]}
             </NavLink>
           ))}
 

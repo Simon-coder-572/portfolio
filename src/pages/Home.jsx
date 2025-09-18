@@ -8,6 +8,8 @@ import { ContactSection } from "../components/ContactSection";
 
 export default function Home() {
   const { lang } = useContext(AppContext);
+  const t = translations[lang];
+
 
   return (
     <div>
@@ -17,7 +19,7 @@ export default function Home() {
       <ContactSection />
 
       <main> 
-        <h1>{translations[lang].homeTitle}</h1>
+        <h1>{t.homeTitle}</h1>
         <p>
           Welcome to my portfolio website. Scroll down to see my projects and skills.
         </p>

@@ -1,0 +1,179 @@
+.contact-page {
+  padding: 80px 20px 60px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--text-color-soft);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.card {
+  background: var(--bg-color);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 1px 1px var(--bg-color-soft);
+  margin-bottom: 20px;
+}
+
+h2, h3, h4 {
+  color: var(--text-color);
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn {
+  background: var(--accent-color);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.badge {
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.contact-method {
+  margin-bottom: 15px;
+}
+
+.contact-method .description {
+  font-size: 0.85rem;
+  color: var(--text-color-soft);
+}
+
+.social-link {
+  display: block;
+  padding: 5px 0;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
+
+.faq-item h4 {
+  margin-bottom: 5px;
+}
+
+.faq-item p {
+  font-size: 0.9rem;
+  color: var(--text-color-soft);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--secondary-color);
+  margin: 10px 0;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px 20px;
+  background: linear-gradient(90deg, var(--accent-color)/10, var(--secondary-color)/10);
+  border-radius: 10px;
+}
+
+.cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  color: var(--text-color-soft);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+}
