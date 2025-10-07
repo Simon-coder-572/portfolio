@@ -1,7 +1,7 @@
 html,body,#root { height:100%; }
 body {
   margin: 0;
-  background: var(--bg-color);
+  background: var(--bg-color-2);
   color: var(--text-color);
   transition: background .18s ease, color .18s ease;
   font-family: Inter, system-ui, Arial, sans-serif;

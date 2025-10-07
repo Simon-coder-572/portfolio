@@ -40,11 +40,16 @@ const translations = {
     languages: "Languages",
     contactNow: "Contact Now",
 
-    companyName: "Servernet",
-    companySlogan: "Your vision, Powered by us",
-    companyLocation: "Amsterdam, Netherlands",
-    companyHours: "Mon - Fri within 24 hours",
-    companyEmail: "simon.server@outlook.nl",
+    companyName1: "Name",
+    companyName2: "Servernet",
+    companySlogan1: "Slogan",
+    companySlogan2: "Your vision, Powered by us",
+    companyLocation1: "Location",
+    companyLocation2: "Amsterdam, Netherlands",
+    companyHours1: "Availability",
+    companyHours2: "Mon - Fri within 24 hours",
+    companyEmail1: "Email",
+    companyEmail2: "simon.server@outlook.nl",
 
     tagsList: [
       "Linux",
@@ -103,11 +108,16 @@ const translations = {
     languages: "Talen",
     contactNow: "Contact Nu",
 
-    companyName: "Servernet",
-    companySlogan: "Your vision, Powered by us",
-    companyLocation: "Amsterdam, Nederland",
-    companyHours: "Ma - Vr binnen 24 uur",
-    companyEmail: "simon.server@outlook.nl",
+    companyName1: "Naam",
+    companyName2: "Servernet",
+    companySlogan1: "Slogan",
+    companySlogan2: "Your vision, Powered by us",
+    companyLocation1: "Locatie",
+    companyLocation2: "Amsterdam, Nederland",
+    companyHours1: "Berijkbaarheid",
+    companyHours2: "Ma - Vr binnen 24 uur",
+    companyEmail1: "Email",
+    companyEmail2: "simon.server@outlook.nl",
 
     tagsList: [
       "Linux",

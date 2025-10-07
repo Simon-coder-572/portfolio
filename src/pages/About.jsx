@@ -64,24 +64,24 @@ export default function About() {
               <table className="company-table">
                 <tbody>
                   <tr>
-                    <td>{t.companyName}</td>
-                    <td>{t.companyName}</td>
+                    <td>{t.companyName1}</td>
+                    <td>{t.companyName2}</td>
                   </tr>
                   <tr>
-                    <td>Slogan</td>
-                    <td>{t.companySlogan}</td>
+                    <td>{t.companySlogan1}</td>
+                    <td>{t.companySlogan2}</td>
                   </tr>
                   <tr>
-                    <td>Locatie</td>
-                    <td>{t.companyLocation}</td>
+                    <td>{t.companyLocation1}</td>
+                    <td>{t.companyLocation2}</td>
                   </tr>
                   <tr>
-                    <td>Werk tijden</td>
-                    <td>{t.companyHours}</td>
+                    <td>{t.companyHours1}</td>
+                    <td>{t.companyHours2}</td>
                   </tr>
                   <tr>
-                    <td>Email</td>
-                    <td>{t.companyEmail}</td>
+                    <td>{t.companyEmail1}</td>
+                    <td>{t.companyEmail2}</td>
                   </tr>
                 </tbody>
               </table>

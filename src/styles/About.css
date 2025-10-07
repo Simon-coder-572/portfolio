@@ -1,6 +1,5 @@
 .about {
   padding: 80px 20px 60px;
-  background: var(--bg-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-color);
 }
