@@ -1,9 +1,0 @@
-/* import theme.css first in main.jsx, maar body gebruikt de variables */
-html,body,#root { height:100%; }
-body {
-  margin: 0;
-  background: var(--bg-color);
-  color: var(--text-color);
-  font-family: Inter, system-ui, Arial, sans-serif;
-  transition: background .2s ease, color .2s ease;
-}
